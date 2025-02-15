@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="gace.controlador.SocioControlador">
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="500" spacing="15">
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Gestión de Socios" />
+
+        <TableView fx:id="tablaSocios" prefHeight="250" prefWidth="450">
+            <columns>
+                <TableColumn fx:id="columnaID" prefWidth="120" text="ID" />
+                <TableColumn fx:id="columnaNombre" prefWidth="135" text="Nombre" />
+                <TableColumn fx:id="columnaApellido" prefWidth="135" text="Apellido" />
+                <TableColumn fx:id="columnaTipo" prefWidth="140" text="Tipo de Socio" />
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="btnRegistrar" onAction="#handleRegistrarF" text="Registrar" />
+            <Button fx:id="btnModificar" onAction="#handleModificar" text="Modificar" />
+            <Button fx:id="btnEliminar" onAction="#handleEliminar" text="Eliminar" />
+            <Button fx:id="btnBuscar" onAction="#handleBuscar" text="Buscar" />
+        </HBox>
+    </VBox>
+</StackPane>
